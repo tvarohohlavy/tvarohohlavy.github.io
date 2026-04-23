@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jakub Trávník - CV</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #222;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 24px 12px;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .page {
+    max-width: 900px;
+    margin: 0 auto 24px;
+    background: #fff;
+    padding: 36px 48px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  /* Header */
+  .header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 16px;
+  }
+  .header .photo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #ddd center/cover no-repeat;
+    flex-shrink: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+  }
+  .header .photo svg { display: block; width: 100%; height: 100%; }
+  .header .name {
+    flex: 1;
+    min-width: 0;
+  }
+  .header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    font-style: italic;
+    color: #111;
+  }
+  .header .title {
+    font-size: 14px;
+    color: #444;
+    margin-top: 2px;
+  }
+  .header .contact {
+    text-align: left;
+    font-size: 12.5px;
+    line-height: 1.7;
+    min-width: 220px;
+    color: #444;
+  }
+  .header .contact div { display: flex; align-items: center; gap: 6px; }
+  .header .contact a { color: #2a6db5; text-decoration: none; }
+  .header .contact a:hover { text-decoration: underline; }
+  .header .contact .icon {
+    display: inline-block;
+    width: 14px;
+    text-align: center;
+    color: #666;
+  }
+
+  /* Sections */
+  h2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+    margin: 24px 0 10px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #bbb;
+  }
+  h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 14px 0 2px;
+    color: #111;
+  }
+  .role {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .role .dates {
+    color: #555;
+    font-size: 13px;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+  .company {
+    color: #555;
+    font-style: italic;
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+  .clearance {
+    font-weight: 700;
+    margin: 4px 0;
+  }
+  ul { margin: 4px 0 8px 22px; padding: 0; }
+  ul li { margin: 2px 0; }
+  p { margin: 4px 0; }
+  .subhead {
+    font-weight: 700;
+    margin-top: 8px;
+  }
+  .indented { margin-left: 22px; }
+  .indented p { margin: 3px 0; }
+
+  /* Skills */
+  .skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6px;
+  }
+  .skills-table td {
+    vertical-align: top;
+    padding: 8px 6px;
+  }
+  .skills-table td.label {
+    width: 200px;
+    color: #555;
+    font-size: 13px;
+  }
+  .skill-bar {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 4px;
+  }
+  .skill-bar span {
+    flex: 1;
+    height: 10px;
+    background: #ddd;
+  }
+  .skill-bar span.filled { background: #222; }
+  .skill-detail {
+    font-size: 13px;
+    color: #333;
+  }
+
+  @media (max-width: 700px) {
+    .page { padding: 20px; }
+    .header { flex-direction: column; }
+    .header .contact { min-width: 0; }
+    .header h1 { font-size: 26px; }
+    .skills-table td.label { width: 120px; }
+  }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { box-shadow: none; margin: 0 auto; }
+  }
+</style>
+</head>
+<body>
+
+<main class="page">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="photo" aria-label="Photo placeholder">
+      <svg viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avatar placeholder">
+        <rect width="90" height="90" fill="#cfd4d8"/>
+        <circle cx="45" cy="36" r="16" fill="#9aa3aa"/>
+        <path d="M10 90 C 15 65, 75 65, 80 90 Z" fill="#9aa3aa"/>
+      </svg>
+    </div>
+    <div class="name">
+      <h1>Jakub Trávník</h1>
+      <div class="title">Network &amp; Infrastructure Automation<br>Consultant - EU Secret PSC</div>
+    </div>
+    <div class="contact">
+      <div><span class="icon">📍</span> Prague, Czech Republic</div>
+      <div><span class="icon">📞</span> 00 420 777 581 040</div>
+      <div><span class="icon">✉</span> <a href="mailto:jakub.travnik@gmail.com">jakub.travnik@gmail.com</a></div>
+      <div><span class="icon">in</span> <a href="https://linkedin.com/in/jakub-travnik" target="_blank" rel="noopener">linkedin.com/in/jakub-travnik</a></div>
+    </div>
+  </header>
+
+  <!-- Summary -->
+  <section>
+    <h2>Summary</h2>
+    <p>I am Network, Infrastructure and Automation Consultant with 8+ years of experience over which I really went from 0 to being expert in broad range of technologies which also makes me capable of easily learning new ones and connecting them together for whatever use case is needed. My expertise goes from programming languages, automation tools, network infrastructure, server management, DevOps, virtualization and containerization to tools integration, data gathering, data analysis and regular expressions. I ain't afraid of neither Linux nor Windows servers, I am friend with both legacy and software defined technologies. I always think about automating and optimizing things before actually doing them and I am trying to make work easier for others as well this way. Outside of work I love to spend time either with my family or doing unordinary sports like sandstone climbing, slacklining, partner acrobatics, swing dancing or standing on my hands.</p>
+    <p>I just love being challenged by complex projects!</p>
+  </section>
+
+  <!-- Work experience -->
+  <section>
+    <h2>Work experience</h2>
+
+    <div class="role"><h3>DevOps Automation Engineer</h3><span class="dates">7/2023 - Present</span></div>
+    <div class="company">Atos/Eviden - Contract (Remote)</div>
+    <p>Working on account eu-LISA (European Union Agency for the Operational Management of Large-Scale IT Systems in the Area of Freedom, Security and Justice)</p>
+    <p class="clearance">EU Secret - Personal Security Clearance</p>
+    <ul>
+      <li>"Testinfra like" Pytest plugin development for Cisco ACI and VMware + related Testsuites</li>
+      <li>Windows Server installation automation</li>
+      <li>Windows System Update Services (WSUS) and Active Directory Domain Services (ADDS) server installation and configuration automation</li>
+      <li>Nagios monitoring platform automation</li>
+    </ul>
+
+    <div class="role"><h3>Principal Network Engineer - Telecoms Network Engineering</h3><span class="dates">1/2021 - 7/2023</span></div>
+    <div class="company">DHL Information Services</div>
+
+    <p class="subhead">Datacenter migration to Cisco ACI SDN:</p>
+    <div class="indented">
+      <p>Technical lead for migration of 3 regional multipod (DC+DR) datacenters to Software defined network.</p>
+      <p>Python scripts to translate legacy network to Cisco ACI objects during migration of 400+ switches</p>
+      <p>Ansible playbooks to enable build and run tasks in Cisco ACI and speed them up significantly</p>
+    </div>
+
+    <p class="subhead">DevNet and DevOps:</p>
+    <div class="indented">
+      <p>Establishment of global Network Automation Taskforce (NAT) across regional Teams</p>
+      <p>Introduction of CI/CD using Github Enterprise (VCS, Actions, Secrets and Self-hosted runners) and JFrog Artifactory as Docker Registry</p>
+      <p>Build and management of Vanilla Kubernetes cluster to host various self managed apps and tools: MongoDB, MariaDB, InfluxDB, Telegraf, Grafana, Redis, Self-hosted Github runners, Ansible AWX, Custom apps and scripts</p>
+      <p>Ongoing development and support of internal tools based on Bash, Python, HTML, CSS, Javascript, RestAPI</p>
+      <p>Build and management of LAB VMware ESXi cluster under VMware vCenter including vMotion on standalone servers and Cisco UCS 5108 blade chassis</p>
+    </div>
+
+    <p class="subhead">Other:</p>
+    <p>- Mentoring newcomers</p>
+    <p>- Best practice and standards evangelist</p>
+    <p>- Customer Experience presentation on SDN adoption in DHL to Cisco Europe Sales representatives</p>
+    <p>- A to Z (PoC to RUN) projects ownership</p>
+    <p>- SME for Cisco SD-Access, Cisco DNA Center, Riverbed WAN Optimization, Cisco ACI, Cisco ISE, Ansible AWX</p>
+
+    <div class="role"><h3>Senior Network Engineer - Telecoms Network Engineering</h3><span class="dates">12/2018 - 12/2020</span></div>
+    <div class="company">DHL Information Services</div>
+    <p>- Consultancy during design and implementation of telecommunications solutions for WAN, LAN, WLAN &amp; WAN Optimization service towers</p>
+    <p>- Pre-sales activities including technical advisory and design</p>
+    <p>- Data center telecommunications infrastructure build and lifecycle activities excluding incident management of production environment</p>
+    <p>- SME for Cisco SD-Access, Cisco DNA Center, Riverbed WAN Optimization</p>
+
+    <div class="role"><h3>Senior Network Engineer - Service Desk for DHL Europe</h3><span class="dates">06/2017 - 07/2018</span></div>
+    <div class="company">British Telecom Global Services (over O2 Czech Republic)</div>
+    <p>- Troubleshooting, Owning and resolving highly escalated and complex incidents.</p>
+    <p>- Quality of Service // Class of Service: analysis for incidents</p>
+    <p>- Remote Packet Capture and Analysis, Team Technical Guidance and Support.</p>
+    <p>- Monitoring: Responsible to improve usage, reliability, fixing issues, requesting new features.</p>
+    <p>- Scripting to help others with their tasks, to create network topologies, network inventories, test access methods, repair configuration issues in bulk, support LAN port audit project.</p>
+
+    <div class="role"><h3>Network Engineer - Service Desk for DHL Europe</h3><span class="dates">01/2017 - 05/2017</span></div>
+    <div class="company">British Telecom Global Services (over O2 Czech Republic)</div>
+    <p>Root Cause Analysis (RCA), Major Incident Report (MIR) ownership. Device configuration.</p>
+
+    <div class="role"><h3>NOC Technician - Service Desk for DHL Europe</h3><span class="dates">02/2016 - 12/2016</span></div>
+    <div class="company">Telefónica Global Services (over O2 Czech Republic)</div>
+    <p>WAN / LAN / WLAN / VOICE Troubleshooting and Incident resolving on 2000+ sites with 10000+ devices.</p>
+  </section>
+
+  <!-- Certifications -->
+  <section>
+    <h2>Certifications</h2>
+    <div class="role"><h3>Cisco CCNP - Routing and Switching</h3><span class="dates">March 2017 - March 2020</span></div>
+  </section>
+
+  <!-- Skills -->
+  <section>
+    <h2>Skills</h2>
+    <table class="skills-table">
+      <tr>
+        <td class="label">(Virtual|Container)ization</td>
+        <td>
+          <div class="skill-bar">
+            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span><span></span>
+          </div>
+          <div class="skill-detail">VMware ESXi, vCenter, NSX and Workstation Pro, GNS3, Cisco VIRL/CML, Kubernetes, Docker</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="label">Hardware|Systems</td>
+        <td>
+          <div class="skill-bar">
+            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span><span></span><span></span>
+          </div>
+          <div class="skill-detail">Cisco, Hewlett-Packard, Juniper, Motorola, Mikrotik</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="label">Infrastructure &amp; Automation</td>
+        <td>
+          <div class="skill-bar">
+            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span>
+          </div>
+          <div class="skill-detail">RHEL, Ubuntu, Windows Server, WSUS, ADDS, Ansible AWX, Terraform/OpenTofu, Pytest, Testinfra, PyInvoke, Avi Load-Balancer, PiHole, BT Diamond IP Control IPAM</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="label">Computer languages</td>
+        <td>
+          <div class="skill-bar">
+            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span><span></span><span></span>
+          </div>
+          <div class="skill-detail">Main: Python, SQL, Bash, Powershell<br>Experience: C++, JS, VB, TCL, EEM, HTML, CSS, PHP, Golang</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="label">Databases</td>
+        <td>
+          <div class="skill-bar">
+            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="skill-detail">MySQL, PostgreSQL, MariaDB Replication Cluster, MongoDB, InfluxDB</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="label">Desktop Applications</td>
+        <td>
+          <div class="skill-bar">
+            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="skill-detail">Wireshark, Ostinato, Visual Studio Code, Postman</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="label">Monitoring</td>
+        <td>
+          <div class="skill-bar">
+            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="skill-detail">IP Fabric, Netbrain, Solarwinds, Zabbix, Grafana, Prometheus, gRPC</div>
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Personal development -->
+  <section>
+    <h2>Personal development</h2>
+
+    <h3>Homelab</h3>
+    <p>I am using Github.com Actions/Workflows with my Self-hosted runners for building VM templates via Hashicorp Packer and then building VMs from them also via similar pipelines. Pipelines are also used for managing the servers themselves.</p>
+
+    <p class="subhead">VMware cluster:</p>
+    <ul>
+      <li>4x Supermicro SYS-E300-12D-4CN6P each having: 256GB RAM, 3TB SSD, 4cores</li>
+      <li>Running: vSphere 8.0.2 + vCenter 8.0.2 + VSAN ESA (SSDs in RAID5)</li>
+      <li>VMs: Cisco CML, Syslog, Guacamole, Avi Load-Balancer cluster, Rancher K8s cluster, ...</li>
+    </ul>
+
+    <p class="subhead">Deskpi cluster:</p>
+    <ul>
+      <li>6x Raspberry Pi CM4108032 (32GB eMMC, 8GB RAM, Wifi)</li>
+      <li>6x 1TB M.2 NVMe SSD</li>
+      <li>Deskpi Super6C Mini-ITX board</li>
+      <li>Running: K3s Kubernetes, Github Actions Runner Controller, Tailscale</li>
+    </ul>
+
+    <p class="subhead">Standalone:</p>
+    <ul>
+      <li>2x Raspberry Pi CM4108032 (32GB eMMC, 8GB RAM, Wifi) in Waveshare RPI4B adapter
+        <ul><li>Running: Github Actions Runner, PiHole DNS, Tailscale</li></ul>
+      </li>
+      <li>2x Raspberry Pi Zero 2W
+        <ul><li>Running: Tailscale</li></ul>
+      </li>
+    </ul>
+
+    <p class="subhead">Networking:</p>
+    <ul>
+      <li>1x Mikrotik RB5009UPr+S+IN | Router</li>
+      <li>2x Mikrotik CRS310-1G-5S-4S+IN | For general connectivity to Servers</li>
+      <li>2x Mikrotik CRS309-1G-8S+IN | Mainly for 10G MMD for VSAN and vMotion traffic</li>
+    </ul>
+
+    <h3>Conferences</h3>
+    <ul>
+      <li>Cisco Live Barcelona 2020</li>
+      <li>VMware Explore Barcelona 2022</li>
+      <li>Cisco Live Amsterdam 2023</li>
+      <li>VMware Explore Barcelona 2023</li>
+      <li>Cisco Live Amsterdam 2024</li>
+      <li>KCD Czech &amp; Slovak 2024</li>
+    </ul>
+
+    <h3>VMware User Group Membership</h3>
+    <p>Attending regular meetups of Czech VMUG community</p>
+
+    <h3>Cisco Insider User Group Membership</h3>
+    <p>Attending regular roadmap and tech update sessions</p>
+  </section>
+
+</main>
+
+</body>
+</html>
