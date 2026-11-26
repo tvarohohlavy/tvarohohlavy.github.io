@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jakub Trávník - CV</title>
+<meta name="description" content="CV of Jakub Trávník, Solution Architect for Network &amp; Infrastructure Automation, based in Prague, Czech Republic.">
 <style>
   * { box-sizing: border-box; }
   body {
@@ -38,7 +39,7 @@
     overflow: hidden;
     border: 1px solid #ccc;
   }
-  .header .photo svg { display: block; width: 100%; height: 100%; }
+  .header .photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
   .header .name {
     flex: 1;
     min-width: 0;
@@ -120,42 +121,18 @@
   .indented p { margin: 3px 0; }
 
   /* Skills */
-  .skills-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 6px;
-  }
-  .skills-table td {
-    vertical-align: top;
-    padding: 8px 6px;
-  }
-  .skills-table td.label {
-    width: 200px;
-    color: #555;
-    font-size: 13px;
-  }
-  .skill-bar {
-    display: flex;
-    gap: 3px;
-    margin-bottom: 4px;
-  }
-  .skill-bar span {
-    flex: 1;
-    height: 10px;
-    background: #ddd;
-  }
-  .skill-bar span.filled { background: #222; }
-  .skill-detail {
-    font-size: 13px;
-    color: #333;
-  }
+  .skills { display: grid; grid-template-columns: 200px 1fr; gap: 6px 12px; margin: 6px 0; }
+  .skills dt { color: #555; font-size: 13px; }
+  .skills dd { margin: 0; font-size: 13px; color: #333; }
+  .updated { color: #555; font-size: 12px; margin-top: 24px; text-align: right; }
 
   @media (max-width: 700px) {
     .page { padding: 20px; }
     .header { flex-direction: column; }
     .header .contact { min-width: 0; }
     .header h1 { font-size: 26px; }
-    .skills-table td.label { width: 120px; }
+    .skills { grid-template-columns: 1fr; }
+    .skills dd { margin-bottom: 6px; }
   }
   @media print {
     body { background: #fff; padding: 0; }
@@ -170,15 +147,11 @@
   <!-- Header -->
   <header class="header">
     <div class="photo">
-      <svg viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avatar placeholder">
-        <rect width="90" height="90" fill="#cfd4d8"/>
-        <circle cx="45" cy="36" r="16" fill="#9aa3aa"/>
-        <path d="M10 90 C 15 65, 75 65, 80 90 Z" fill="#9aa3aa"/>
-      </svg>
+      <img src="photo.jpg" alt="Photo of Jakub Trávník" width="90" height="90">
     </div>
     <div class="name">
       <h1>Jakub Trávník</h1>
-      <div class="title">Network &amp; Infrastructure Automation<br>Consultant - EU Secret PSC</div>
+      <div class="title">Solution Architect - Network &amp; Infrastructure Automation<br>EU Secret PSC (valid until 10/2033)</div>
     </div>
     <div class="contact">
       <div><span class="icon">📍</span> Prague, Czech Republic</div>
@@ -191,7 +164,8 @@
   <!-- Summary -->
   <section>
     <h2>Summary</h2>
-    <p>I am Network, Infrastructure and Automation Consultant with 8+ years of experience over which I really went from 0 to being expert in broad range of technologies which also makes me capable of easily learning new ones and connecting them together for whatever use case is needed. My expertise goes from programming languages, automation tools, network infrastructure, server management, DevOps, virtualization and containerization to tools integration, data gathering, data analysis and regular expressions. I ain't afraid of neither Linux nor Windows servers, I am friend with both legacy and software defined technologies. I always think about automating and optimizing things before actually doing them and I am trying to make work easier for others as well this way. Outside of work I love to spend time either with my family or doing unordinary sports like sandstone climbing, slacklining, partner acrobatics, swing dancing or standing on my hands.</p>
+    <p>I am a Network, Infrastructure and Automation Consultant with 10+ years of experience. I started at a network operations centre and grew into an expert across a broad range of technologies, which makes it easy for me to learn new ones and connect them together for whatever use case is needed.</p>
+    <p>My expertise covers programming languages, automation tools, network infrastructure, server management, DevOps, virtualization and containerization, tools integration, data gathering and analysis, and regular expressions. I am at home on both Linux and Windows servers, and with both legacy and software-defined technologies. I always look at automating and optimizing a task before doing it by hand, and I try to make work easier for others this way.</p>
     <p>I just love being challenged by complex projects!</p>
   </section>
 
@@ -199,14 +173,22 @@
   <section>
     <h2>Work experience</h2>
 
-    <div class="role"><h3>DevOps Automation Engineer</h3><span class="dates">7/2023 - Present</span></div>
-    <div class="company">Atos/Eviden - Contract (Remote)</div>
+    <div class="role"><h3>Solution Architect</h3><span class="dates">11/2024 - Present</span></div>
+    <div class="company">Rexonix s.r.o.</div>
+    <ul>
+      <li>Main focus: development of the <a href="https://hegemony.sh" target="_blank" rel="noopener noreferrer">Hegemony.sh</a> workflow orchestration platform</li>
+      <li>Cisco Enterprise and Data Center network consultancy</li>
+      <li>Infrastructure automation consultancy</li>
+    </ul>
+
+    <div class="role"><h3>DevOps Automation Engineer</h3><span class="dates">7/2023 - 6/2025</span></div>
+    <div class="company">Atos - Contract (Remote)</div>
     <p>Working on account eu-LISA (European Union Agency for the Operational Management of Large-Scale IT Systems in the Area of Freedom, Security and Justice)</p>
     <p class="clearance">EU Secret - Personal Security Clearance</p>
     <ul>
-      <li>"Testinfra like" Pytest plugin development for Cisco ACI and VMware + related Testsuites</li>
+      <li>"Testinfra-like" Pytest plugin development for Cisco ACI and VMware, plus related test suites</li>
       <li>Windows Server installation automation</li>
-      <li>Windows System Update Services (WSUS) and Active Directory Domain Services (ADDS) server installation and configuration automation</li>
+      <li>Windows Server Update Services (WSUS) and Active Directory Domain Services (ADDS) server installation and configuration automation</li>
       <li>Nagios monitoring platform automation</li>
     </ul>
 
@@ -214,130 +196,92 @@
     <div class="company">DHL Information Services</div>
 
     <p class="subhead">Datacenter migration to Cisco ACI SDN:</p>
-    <div class="indented">
-      <p>Technical lead for migration of 3 regional multipod (DC+DR) datacenters to Software defined network.</p>
-      <p>Python scripts to translate legacy network to Cisco ACI objects during migration of 400+ switches</p>
-      <p>Ansible playbooks to enable build and run tasks in Cisco ACI and speed them up significantly</p>
-    </div>
+    <ul>
+      <li>Technical lead for migration of 3 regional multipod (DC+DR) datacenters to software-defined networking</li>
+      <li>Python scripts to translate the legacy network to Cisco ACI objects during migration of 400+ switches</li>
+      <li>Ansible playbooks to enable build and run tasks in Cisco ACI and speed them up significantly</li>
+    </ul>
 
     <p class="subhead">DevNet and DevOps:</p>
-    <div class="indented">
-      <p>Establishment of global Network Automation Taskforce (NAT) across regional Teams</p>
-      <p>Introduction of CI/CD using GitHub Enterprise (VCS, Actions, Secrets and Self-hosted runners) and JFrog Artifactory as Docker Registry</p>
-      <p>Build and management of Vanilla Kubernetes cluster to host various self managed apps and tools: MongoDB, MariaDB, InfluxDB, Telegraf, Grafana, Redis, Self-hosted GitHub runners, Ansible AWX, Custom apps and scripts</p>
-      <p>Ongoing development and support of internal tools based on Bash, Python, HTML, CSS, Javascript, RestAPI</p>
-      <p>Build and management of LAB VMware ESXi cluster under VMware vCenter including vMotion on standalone servers and Cisco UCS 5108 blade chassis</p>
-    </div>
+    <ul>
+      <li>Establishment of a global Network Automation Taskforce (NAT) across regional teams</li>
+      <li>Introduction of CI/CD using GitHub Enterprise (VCS, Actions, Secrets and self-hosted runners) and JFrog Artifactory as Docker registry</li>
+      <li>Build and management of a vanilla Kubernetes cluster hosting self-managed apps and tools: MongoDB, MariaDB, InfluxDB, Telegraf, Grafana, Redis, self-hosted GitHub runners, Ansible AWX, custom apps and scripts</li>
+      <li>Ongoing development and support of internal tools based on Bash, Python, HTML, CSS, JavaScript and REST APIs</li>
+      <li>Build and management of a lab VMware ESXi cluster under VMware vCenter, including vMotion, on standalone servers and a Cisco UCS 5108 blade chassis</li>
+    </ul>
 
     <p class="subhead">Other:</p>
-    <p>- Mentoring newcomers</p>
-    <p>- Best practice and standards evangelist</p>
-    <p>- Customer Experience presentation on SDN adoption in DHL to Cisco Europe Sales representatives</p>
-    <p>- A to Z (PoC to RUN) projects ownership</p>
-    <p>- SME for Cisco SD-Access, Cisco DNA Center, Riverbed WAN Optimization, Cisco ACI, Cisco ISE, Ansible AWX</p>
+    <ul>
+      <li>Mentoring newcomers</li>
+      <li>Best practice and standards evangelist</li>
+      <li>Customer Experience presentation on SDN adoption in DHL to Cisco Europe sales representatives</li>
+      <li>A to Z (PoC to RUN) project ownership</li>
+      <li>SME for Cisco SD-Access, Cisco DNA Center, Riverbed WAN Optimization, Cisco ACI, Cisco ISE, Ansible AWX</li>
+    </ul>
 
     <div class="role"><h3>Senior Network Engineer - Telecoms Network Engineering</h3><span class="dates">12/2018 - 12/2020</span></div>
     <div class="company">DHL Information Services</div>
-    <p>- Consultancy during design and implementation of telecommunications solutions for WAN, LAN, WLAN &amp; WAN Optimization service towers</p>
-    <p>- Pre-sales activities including technical advisory and design</p>
-    <p>- Data center telecommunications infrastructure build and lifecycle activities excluding incident management of production environment</p>
-    <p>- SME for Cisco SD-Access, Cisco DNA Center, Riverbed WAN Optimization</p>
+    <ul>
+      <li>Consultancy during design and implementation of telecommunications solutions for WAN, LAN, WLAN &amp; WAN Optimization service towers</li>
+      <li>Pre-sales activities including technical advisory and design</li>
+      <li>Data center telecommunications infrastructure build and lifecycle activities, excluding incident management of the production environment</li>
+      <li>SME for Cisco SD-Access, Cisco DNA Center, Riverbed WAN Optimization</li>
+    </ul>
 
     <div class="role"><h3>Senior Network Engineer - Service Desk for DHL Europe</h3><span class="dates">06/2017 - 07/2018</span></div>
     <div class="company">British Telecom Global Services (over O2 Czech Republic)</div>
-    <p>- Troubleshooting, Owning and resolving highly escalated and complex incidents.</p>
-    <p>- Quality of Service // Class of Service: analysis for incidents</p>
-    <p>- Remote Packet Capture and Analysis, Team Technical Guidance and Support.</p>
-    <p>- Monitoring: Responsible to improve usage, reliability, fixing issues, requesting new features.</p>
-    <p>- Scripting to help others with their tasks, to create network topologies, network inventories, test access methods, repair configuration issues in bulk, support LAN port audit project.</p>
+    <ul>
+      <li>Troubleshooting, owning and resolving highly escalated and complex incidents</li>
+      <li>Quality of Service / Class of Service analysis for incidents</li>
+      <li>Remote packet capture and analysis, team technical guidance and support</li>
+      <li>Monitoring: improving usage and reliability, fixing issues, requesting new features</li>
+      <li>Scripting to help others with their tasks: network topologies, network inventories, access method tests, bulk configuration repairs, LAN port audit project</li>
+    </ul>
 
     <div class="role"><h3>Network Engineer - Service Desk for DHL Europe</h3><span class="dates">01/2017 - 05/2017</span></div>
     <div class="company">British Telecom Global Services (over O2 Czech Republic)</div>
-    <p>Root Cause Analysis (RCA), Major Incident Report (MIR) ownership. Device configuration.</p>
+    <ul>
+      <li>Root Cause Analysis (RCA) and Major Incident Report (MIR) ownership</li>
+      <li>Device configuration</li>
+    </ul>
 
     <div class="role"><h3>NOC Technician - Service Desk for DHL Europe</h3><span class="dates">02/2016 - 12/2016</span></div>
     <div class="company">Telefónica Global Services (over O2 Czech Republic)</div>
-    <p>WAN / LAN / WLAN / VOICE Troubleshooting and Incident resolving on 2000+ sites with 10000+ devices.</p>
+    <ul>
+      <li>WAN / LAN / WLAN / Voice troubleshooting and incident resolution on 2000+ sites with 10000+ devices</li>
+    </ul>
   </section>
 
   <!-- Certifications -->
   <section>
     <h2>Certifications</h2>
+    <div class="role"><h3>Cisco Certified Specialist - Enterprise Core</h3><span class="dates">February 2025</span></div>
+    <div class="role"><h3>Cisco CCIE Enterprise Infrastructure</h3><span class="dates">In progress</span></div>
     <div class="role"><h3>Cisco CCNP - Routing and Switching</h3><span class="dates">March 2017 - March 2020</span></div>
   </section>
 
   <!-- Skills -->
   <section>
     <h2>Skills</h2>
-    <table class="skills-table">
-      <tr>
-        <td class="label">(Virtual|Container)ization</td>
-        <td>
-          <div class="skill-bar" aria-hidden="true">
-            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span><span></span>
-          </div>
-          <div class="skill-level">8/10</div>
-          <div class="skill-detail">VMware ESXi, vCenter, NSX and Workstation Pro, GNS3, Cisco VIRL/CML, Kubernetes, Docker</div>
-        </td>
-      </tr>
-      <tr>
-        <td class="label">Hardware|Systems</td>
-        <td>
-          <div class="skill-bar" aria-hidden="true">
-            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span><span></span><span></span>
-          </div>
-          <div class="skill-level">7/10</div>
-          <div class="skill-detail">Cisco, Hewlett-Packard, Juniper, Motorola, Mikrotik</div>
-        </td>
-      </tr>
-      <tr>
-        <td class="label">Infrastructure &amp; Automation</td>
-        <td>
-          <div class="skill-bar" aria-hidden="true">
-            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span>
-          </div>
-          <div class="skill-level">9/10</div>
-          <div class="skill-detail">RHEL, Ubuntu, Windows Server, WSUS, ADDS, Ansible AWX, Terraform/OpenTofu, Pytest, Testinfra, PyInvoke, Avi Load-Balancer, PiHole, BT Diamond IP Control IPAM</div>
-        </td>
-      </tr>
-      <tr>
-        <td class="label">Computer languages</td>
-        <td>
-          <div class="skill-bar" aria-hidden="true">
-            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span><span></span><span></span>
-          </div>
-          <div class="skill-level">7/10</div>
-          <div class="skill-detail">Main: Python, SQL, Bash, Powershell<br>Experience: C++, JS, VB, TCL, EEM, HTML, CSS, PHP, Golang</div>
-        </td>
-      </tr>
-      <tr>
-        <td class="label">Databases</td>
-        <td>
-          <div class="skill-bar">
-            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span><span></span><span></span><span></span>
-          </div>
-          <div class="skill-detail">MySQL, PostgreSQL, MariaDB Replication Cluster, MongoDB, InfluxDB</div>
-        </td>
-      </tr>
-      <tr>
-        <td class="label">Desktop Applications</td>
-        <td>
-          <div class="skill-bar">
-            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span><span></span><span></span><span></span>
-          </div>
-          <div class="skill-detail">Wireshark, Ostinato, Visual Studio Code, Postman</div>
-        </td>
-      </tr>
-      <tr>
-        <td class="label">Monitoring</td>
-        <td>
-          <div class="skill-bar">
-            <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span><span></span><span></span><span></span>
-          </div>
-          <div class="skill-detail">IP Fabric, Netbrain, Solarwinds, Zabbix, Grafana, Prometheus, gRPC</div>
-        </td>
-      </tr>
-    </table>
+    <dl class="skills">
+      <dt>Infrastructure &amp; Automation</dt>
+      <dd>RHEL, Ubuntu, Windows Server, WSUS, ADDS, Ansible, Ansible AWX, Terraform/OpenTofu, HashiCorp Packer, Pytest, Testinfra, PyInvoke, Avi Load Balancer, Pi-hole, BT Diamond IP Control IPAM</dd>
+      <dt>CI/CD &amp; Version control</dt>
+      <dd>Git, GitHub Enterprise, GitHub Actions (incl. self-hosted runners and Actions Runner Controller), JFrog Artifactory</dd>
+      <dt>Virtualization &amp; Containers</dt>
+      <dd>VMware ESXi, vCenter, vSAN, NSX and Workstation Pro, GNS3, Cisco VIRL/CML, Kubernetes, K3s, Rancher, Docker</dd>
+      <dt>Networking hardware</dt>
+      <dd>Cisco (Catalyst Center / DNA Center, ACI, SD-Access, ISE, UCS), Hewlett-Packard, Juniper, Motorola, MikroTik, Riverbed</dd>
+      <dt>Programming languages</dt>
+      <dd>Main: Python, SQL, Bash, PowerShell<br>Experience: C++, JavaScript, VB, TCL, EEM, HTML, CSS, PHP, Go</dd>
+      <dt>Databases</dt>
+      <dd>MySQL, PostgreSQL, MariaDB replication cluster, MongoDB, InfluxDB, Redis</dd>
+      <dt>Monitoring</dt>
+      <dd>IP Fabric, NetBrain, SolarWinds, Zabbix, Nagios, Grafana, Prometheus, Telegraf, gRPC telemetry</dd>
+      <dt>Desktop tools</dt>
+      <dd>Wireshark, Ostinato, Visual Studio Code, Postman</dd>
+    </dl>
   </section>
 
   <!-- Personal development -->
@@ -345,38 +289,45 @@
     <h2>Personal development</h2>
 
     <h3>Homelab</h3>
-    <p>I am using Github.com Actions/Workflows with my Self-hosted runners for building VM templates via Hashicorp Packer and then building VMs from them also via similar pipelines. Pipelines are also used for managing the servers themselves.</p>
+    <p>I use GitHub Actions workflows with my self-hosted runners to build VM templates with HashiCorp Packer, and then to build VMs from them through similar pipelines. The pipelines also manage the servers themselves.</p>
 
     <p class="subhead">VMware cluster:</p>
     <ul>
-      <li>4x Supermicro SYS-E300-12D-4CN6P each having: 256GB RAM, 3TB SSD, 4cores</li>
-      <li>Running: vSphere 8.0.2 + vCenter 8.0.2 + VSAN ESA (SSDs in RAID5)</li>
-      <li>VMs: Cisco CML, Syslog, Guacamole, Avi Load-Balancer cluster, Rancher K8s cluster, ...</li>
+      <li>4x Supermicro SYS-E300-12D-4CN6P, each with 256 GB RAM, 3 TB SSD, 4 cores</li>
+      <li>Running: vSphere 8 + vCenter 8 + vSAN ESA (SSDs in RAID 5)</li>
+      <li>VMs: Cisco CML, Syslog, Guacamole, Avi Load Balancer cluster, Rancher Kubernetes cluster, ...</li>
     </ul>
 
-    <p class="subhead">Deskpi cluster:</p>
+    <p class="subhead">Dell PowerEdge R630:</p>
     <ul>
-      <li>6x Raspberry Pi CM4108032 (32GB eMMC, 8GB RAM, Wifi)</li>
-      <li>6x 1TB M.2 NVMe SSD</li>
-      <li>Deskpi Super6C Mini-ITX board</li>
-      <li>Running: K3s Kubernetes, Github Actions Runner Controller, Tailscale</li>
+      <li>2x Intel Xeon E5-2699 v4 @ 2.20 GHz (2x 22 cores = 44 cores)</li>
+      <li>512 GB DDR4 2400 MHz RAM, 8 TB SSD</li>
+      <li>Usually running: Cisco Catalyst Center or Cisco Modeling Labs (CML)</li>
+    </ul>
+
+    <p class="subhead">DeskPi cluster:</p>
+    <ul>
+      <li>6x Raspberry Pi CM4108032 (32 GB eMMC, 8 GB RAM, Wi-Fi)</li>
+      <li>6x 1 TB M.2 NVMe SSD</li>
+      <li>DeskPi Super6C Mini-ITX board</li>
+      <li>Running: K3s Kubernetes, GitHub Actions Runner Controller, Tailscale</li>
     </ul>
 
     <p class="subhead">Standalone:</p>
     <ul>
-      <li>2x Raspberry Pi CM4108032 (32GB eMMC, 8GB RAM, Wifi) in Waveshare RPI4B adapter
-        <ul><li>Running: Github Actions Runner, PiHole DNS, Tailscale</li></ul>
+      <li>2x Raspberry Pi CM4108032 (32 GB eMMC, 8 GB RAM, Wi-Fi) in Waveshare RPi4B adapter
+        <ul><li>Running: GitHub Actions Runner, Pi-hole DNS, Tailscale</li></ul>
       </li>
-      <li>2x Raspberry Pi Zero 2W
+      <li>2x Raspberry Pi Zero 2 W
         <ul><li>Running: Tailscale</li></ul>
       </li>
     </ul>
 
     <p class="subhead">Networking:</p>
     <ul>
-      <li>1x Mikrotik RB5009UPr+S+IN | Router</li>
-      <li>2x Mikrotik CRS310-1G-5S-4S+IN | For general connectivity to Servers</li>
-      <li>2x Mikrotik CRS309-1G-8S+IN | Mainly for 10G MMD for VSAN and vMotion traffic</li>
+      <li>1x MikroTik RB5009UPr+S+IN | Router</li>
+      <li>2x MikroTik CRS310-1G-5S-4S+IN | General connectivity to servers</li>
+      <li>2x MikroTik CRS309-1G-8S+IN | 10G links, mainly for vSAN and vMotion traffic</li>
     </ul>
 
     <h3>Conferences</h3>
@@ -387,14 +338,30 @@
       <li>VMware Explore Barcelona 2023</li>
       <li>Cisco Live Amsterdam 2024</li>
       <li>KCD Czech &amp; Slovak 2024</li>
+      <li>Cisco Live Amsterdam 2025</li>
+      <li>AutoCon 3 Prague 2025</li>
+      <li>Cisco Connect Prague 2025</li>
+      <li>Innovation Week Prague 2025</li>
+      <li>Cisco Live Amsterdam 2026</li>
+      <li>Cisco Connect Prague 2026</li>
+      <li>HPE Innovation Day Prague 2026</li>
+      <li>F5 Solution Day Prague 2026</li>
     </ul>
 
     <h3>VMware User Group Membership</h3>
-    <p>Attending regular meetups of Czech VMUG community</p>
+    <p>Attending regular meetups of the Czech VMUG community</p>
 
     <h3>Cisco Insider User Group Membership</h3>
     <p>Attending regular roadmap and tech update sessions</p>
   </section>
+
+  <!-- Interests -->
+  <section>
+    <h2>Interests</h2>
+    <p>Outside of work I love to spend time with my family or doing unusual sports: sandstone climbing, slacklining, partner acrobatics, swing dancing and handstands.</p>
+  </section>
+
+  <p class="updated">Last updated: November 2026</p>
 
 </main>
 
